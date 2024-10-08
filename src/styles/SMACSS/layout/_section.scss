@@ -1,0 +1,10 @@
+@use "../base/mixins";
+
+.section {
+  &__title {
+    @include mixins.textColorContrast();
+    @include mixins.uppercase();
+    letter-spacing: 0.14rem;
+    @include mixins.medium();
+  }
+}

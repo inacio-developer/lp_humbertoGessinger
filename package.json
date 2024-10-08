@@ -1,0 +1,21 @@
+{
+    "name": "lp_humbertogessinger",
+    "version": "1.0.0",
+    "scripts": {
+      "dev": "parcel ./src/index.html ./src/styles/main.scss ./src/script/**/*.js ./src/assets/img/*.{jpg,png} ./src/assets/videos/*.{mp4} ./src/assets/data/*.js",
+      "build": "parcel ./src/index.html"
+    },
+    "author": "Rafael Inácio",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+      "@parcel/transformer-sass": "^2.12.0",
+      "buffer": "^6.0.3",
+      "events": "^3.3.0",
+      "process": "^0.11.10",
+      "sass": "^1.79.3",
+      "stream-browserify": "^3.0.0",
+      "util": "^0.12.5"
+    }
+  }
+  

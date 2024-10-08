@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.scss" />
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <section class="menu container">
+        <div class="menu__logo">
+          <img class="menu__logo__img" src="./assets/img/logos/logo.png" />
+        </div>
+        <nav class="menu__links">
+          <nav class="menu__mobile">
+            <button class="menu__mobile__btn">
+              <img
+                class="menu__mobile__icon menu__mobile__icon__open"
+                src="./assets/img/icons/menu-mobile.svg"
+                alt="Menu Mobile icon"
+              />
+              <img
+                class="menu__mobile__icon menu__mobile__icon__close"
+                src="./assets/img/icons/menu_close.svg"
+                alt="Menu Close icon"
+              />
+            </button>
+          </nav>
+          <ul class="links">
+            <li><a class="links__item" href="#init">Inicio</a></li>
+            <li><a class="links__item" href="#artist">Artista</a></li>
+            <li><a class="links__item" href="#schedule">Eventos</a></li>
+            <li><a class="links__item" href="#discography">Discografia</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <section class="layer" id="init">
+      <div class="layer__overlap"></div>
+      <div class="layer__logo">
+        <img src="./assets/img/logos/logo.png" alt="logo Humberto Gessinger" />
+      </div>
+      <div class="layer__background">
+        <video class="layer__background__video" autoplay loop muted>
+          <source src="./assets/videos/layer_video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="layer__anchors">
+        <a
+          class="layer__anchor"
+          href="https://www.sympla.com.br/eventos?s=humberto+gessinger&tab=eventos&page=1"
+          >Garanta seu ingresso</a
+        >
+        <a
+          class="layer__anchor"
+          href="https://open.spotify.com/intl-pt/artist/4A4HpNHrbu2nzPyIGFTaJ5"
+          >Ouça agora</a
+        >
+      </div>
+    </section>
+    <section class="artist container" id="artist">
+      <img
+        class="artist__photo"
+        src="../src/assets/img/photos/artist_photo.png"
+      />
+      <div class="artist__description">
+        <h4 class="section__title">Artista</h4>
+        <h1 class="artist__description__title">Humberto Gessinger</h1>
+        <p class="artist__description__text">
+          Humberto Gessinger é um cantor, compositor e multi-instrumentista
+          brasileiro, nascido em Porto Alegre, em 1963.
+        </p>
+        <p class="artist__description__text">
+          Ele é mais conhecido por fundar a banda Engenheiros do Hawaii, na qual
+          atuou de 1985 até 2008. Durante esse período, o grupo lançou mais de
+          20 álbuns, conquistando sucesso comercial com discos de ouro e platina
+          e vendendo mais de 3 milhões de cópias.
+        </p>
+        <p class="artist__description__text">
+          Após o hiato da banda, Gessinger formou o duo Pouca Vogal com Duca
+          Leindecker, com o qual se apresentou entre 2008 e 2012.
+        </p>
+        <p class="artist__description__text">
+          Desde 2013, Gessinger segue em carreira solo, retomando uma trajetória
+          iniciada em 1996.
+        </p>
+        <span class="artist__description__sign">Humberto Gessinger ღ</span>
+      </div>
+    </section>
+    <section class="schedule container" id="schedule">
+      <h4 class="section__title">Agenda</h4>
+      <h5 class="schedule__subtitle">
+        Previsão para o proximo show:
+        <span class="schedule__subtitle__date"></span>
+      </h5>
+      <ul class="schedule__list"></ul>
+    </section>
+    <section class="discography container" id="discography">
+      <div class="discography__music">
+        <h4 class="discography__list__title"></h4>
+        <p class="discography__list__author"></p>
+        <ul class="discography__list"></ul>
+      </div>
+      <div class="discography__slide">
+        <div class="discography__slide__arrow">
+          <button class="discography__slide__arrow__icon">
+            <img
+              class="discography__slide__arrow__icon__img"
+              src="./assets/img/icons/arrow-left.svg"
+              alt="arrow left"
+            />
+          </button>
+          <button class="discography__slide__arrow__icon">
+            <img
+              class="discography__slide__arrow__icon__img"
+              src="./assets/img/icons/arrow-right.svg"
+              alt="arrow right"
+            />
+          </button>
+        </div>
+        <div class="discography__slide__item__bg">
+          <img
+            class="discography__slide__item__bg__photo"
+            src="./assets/img/photos/discography_disc.png"
+          />
+        </div>
+        <div class="discography__slide__wrapper">
+          <div class="discography__slides">
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_1.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_2.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_3.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_4.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_5.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_6.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_7.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_8.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_9.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_10.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_11.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_12.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_13.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_14.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_15.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_16.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_17.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_18.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_19.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_20.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+            <div class="discography__slide__item">
+              <img
+                class="discography__slide__item__photo"
+                src="./assets/img/photos/discography_21.png"
+                alt="discography Humberto Gessinger"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="banner">
+      <h2 class="banner__title">Disponível nas plataformas digitais</h2>
+      <ul class="banner__plataforms">
+        <li class="banner__plataform">
+          <a href="">
+            <img
+              class="banner__plataform__icon banner__plataform__icon__apple"
+              src="./assets/img/icons/banner_icon (1).svg"
+            />
+          </a>
+        </li>
+        <li class="banner__plataform">
+          <a href="">
+            <img
+              class="banner__plataform__icon banner__plataform__icon__spotify"
+              src="./assets/img/icons/banner_icon (2).svg"
+            />
+          </a>
+        </li>
+        <li class="banner__plataform">
+          <a href="">
+            <img
+              class="banner__plataform__icon"
+              src="./assets/img/icons/banner_icon (3).svg"
+            />
+          </a>
+        </li>
+      </ul>
+    </section>
+    <footer class="footer">
+      <div class="footer__left">
+        <h3 class="footer__title">Fique por dentro</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link"
+              ><img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (1).svg"
+                alt="logo social network"
+              />
+              1gessinger</a
+            >
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"
+              ><img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (3).svg"
+                alt="logo social network"
+              />
+              1gessinger</a
+            >
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"
+              ><img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (2).svg"
+                alt="logo social network"
+              />
+              1gessinger</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="footer__center">
+        <img
+          class="footer__logo"
+          src="./assets/img/logos/logo-estreia.png"
+          alt="logo Estreia Produções"
+        />
+      </div>
+      <andress class="footer__right">
+        <h3 class="footer__title">Contato</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="+552132472525"
+              ><img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (4).svg"
+                alt="logo contact"
+              />
+              + 55 21 32472525</a
+            >
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="mailto:contato@estreiaproducoes.com.br"
+            >
+              <img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (5).svg"
+                alt="logo contact"
+              />
+              contato@estreiaproducoes.com.br
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"
+              ><img
+                class="footer__icon"
+                src="./assets/img/icons/footer_icon (2).svg"
+                alt="logo instagram Estreia Produções"
+              />
+              /estreiaproducoes</a
+            >
+          </li>
+        </ul>
+      </andress>
+    </footer>
+    <script type="module" src="./script/index.js"></script>
+  </body>
+</html>

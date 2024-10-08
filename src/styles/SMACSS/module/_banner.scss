@@ -1,0 +1,30 @@
+@use "../base/mixins";
+
+.banner {
+  @include mixins.padding(6, 0);
+  @include mixins.flex(column, center, center);
+  background-color: #eb9705;
+
+  &__title {
+    @include mixins.uppercase();
+    @include mixins.bold();
+    @include mixins.textColorPrimary();
+  }
+
+  &__plataforms {
+    @include mixins.flex();
+    gap: 4rem;
+  }
+
+  &__plataform {
+    @include mixins.margin(4, 0, 0, 0);
+    &__icon {
+      width: 5rem;
+
+      &__spotify,
+      &__apple {
+        @include mixins.padding(0, 0, 1.5, 0);
+      }
+    }
+  }
+}

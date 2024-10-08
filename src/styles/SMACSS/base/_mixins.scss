@@ -1,0 +1,126 @@
+@use "./variables";
+
+@mixin widthFull() {
+  width: 100%;
+}
+
+@mixin heightFull() {
+  height: 100%;
+}
+
+@mixin none($propriety) {
+  #{$propriety}: none;
+}
+
+@mixin padding($xt, $yr: #{$xt}, $xb: #{$xt}, $yl: #{$yr}) {
+  padding: #{$xt}rem #{$yr}rem #{$xb}rem #{$yl}rem;
+}
+
+@mixin margin($xt, $yr: #{$xt}, $xb: #{$xt}, $yl: #{$yr}) {
+  margin: #{$xt}rem #{$yr}rem #{$xb}rem #{$yl}rem;
+}
+
+@mixin border($size, $type, $color) {
+  border: #{$size}rem #{$type} #{$color};
+}
+
+@mixin bgColorPrimary() {
+  background-color: variables.$color-primary;
+}
+
+@mixin bgColorAlternative() {
+  background-color: variables.$color-alternative;
+}
+
+@mixin bgColorContrast() {
+  background-color: variables.$color-contrast;
+}
+
+@mixin bgImg($url) {
+  background-image: url(#{$url});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin textColorPrimary() {
+  color: variables.$color-primary;
+}
+
+@mixin textColorAlternative() {
+  color: variables.$color-alternative;
+}
+
+@mixin textColorContrast() {
+  color: variables.$color-contrast;
+}
+
+@mixin font() {
+  font-family: variables.$font-family;
+}
+
+@mixin fontAlternative() {
+  font-family: variables.$font-alternative;
+}
+
+@mixin fontSign() {
+  font-family: variables.$font-sign;
+}
+
+@mixin bold() {
+  font-weight: 800;
+}
+
+@mixin medium() {
+  font-weight: 600;
+}
+
+@mixin fontSize() {
+  font-size: 1.6rem;
+}
+
+@mixin uppercase() {
+  text-transform: uppercase;
+}
+
+@mixin bgBtn() {
+  background-color: variables.$color-contrast;
+}
+
+@mixin flex($direction: row, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: #{$direction};
+  justify-content: #{$justify-content};
+  align-items: #{$align-items};
+}
+
+@mixin block {
+  display: block;
+}
+
+@mixin absolute() {
+  position: absolute;
+}
+
+@mixin relative() {
+  position: relative;
+}
+
+@mixin fixed() {
+  position: fixed;
+}
+
+@mixin z-index() {
+  z-index: 5;
+}
+
+@mixin overlap() {
+  @include absolute();
+  @include widthFull();
+  @include heightFull();
+  z-index: 2;
+}
+
+@mixin transition() {
+  transition: 0.6s ease-in;
+}

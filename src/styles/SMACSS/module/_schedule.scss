@@ -1,0 +1,101 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.schedule {
+  @include mixins.padding(0, 0, 6, 0);
+  scroll-margin-top: 16rem;
+
+  &__subtitle {
+    @include mixins.uppercase();
+    @include mixins.textColorAlternative();
+    @include mixins.margin(2, 0);
+    font-weight: 200;
+
+    &__date {
+      @include mixins.bold();
+    }
+  }
+
+  &__item {
+    @include mixins.relative();
+    @include mixins.margin(2, 0);
+    @include mixins.padding(2, 2);
+    @include mixins.border(0.1, solid, #eb9705);
+    border-radius: 0.3rem;
+
+    &__link {
+      @include mixins.textColorAlternative();
+    }
+
+    &__date {
+      @include mixins.uppercase();
+      @include mixins.bold();
+      font-size: 1.4rem;
+    }
+
+    &__local {
+      @include mixins.margin(0.8, 0);
+    }
+
+    &__hover {
+      @include mixins.flex();
+      @include mixins.none(display);
+      @include mixins.absolute();
+      @include mixins.heightFull();
+      @include mixins.widthFull();
+      @include mixins.bgColorContrast();
+      @include mixins.uppercase();
+      @include mixins.bold();
+      animation: toRight ease-in 1s;
+      inset: 0;
+
+      &__text {
+        @include mixins.flex();
+        gap: 0.6rem;
+        animation: opacity ease-in 1.2s;
+      }
+
+      &__text:after {
+        @include mixins.bgImg("../assets/img/icons/schedule_icon.svg");
+        background-size: contain;
+        content: "";
+        display: inline-flex;
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+
+      &__img {
+        @include mixins.margin(0, 0.6);
+        width: 1.8rem;
+      }
+    }
+
+    &:hover &__hover {
+      @include mixins.flex();
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes toRight {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+}

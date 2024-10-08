@@ -1,0 +1,48 @@
+@use "../base/mixins";
+@use "../components/anchor_layer";
+
+.layer {
+  @include mixins.relative();
+  @include mixins.widthFull();
+  @include mixins.flex();
+  height: 100vh;
+  border-bottom-left-radius: 8rem;
+  border-bottom-right-radius: 8rem;
+  flex-direction: column;
+  overflow: hidden;
+  scroll-margin-top: 0em;
+  &__logo {
+    @include mixins.z-index();
+    @include mixins.padding(4, 0);
+  }
+
+  &__background {
+    @include mixins.absolute();
+    @include mixins.widthFull();
+    @include mixins.heightFull();
+  }
+
+  &__background__video {
+    @include mixins.widthFull();
+    @include mixins.heightFull();
+    object-fit: cover;
+  }
+
+  &__title {
+    @include mixins.z-index();
+    @include mixins.textColorPrimary();
+    @include mixins.font();
+  }
+
+  &__overlap {
+    @include mixins.overlap();
+    background-color: black;
+    opacity: 0.4;
+  }
+
+  &__anchors {
+    @include mixins.flex();
+    @include mixins.z-index();
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../base/mixins";
+
+header {
+  @include mixins.widthFull();
+  @include mixins.fixed();
+  transition: 1s ease-in;
+  max-width: 1550px;
+  z-index: 10;
+}

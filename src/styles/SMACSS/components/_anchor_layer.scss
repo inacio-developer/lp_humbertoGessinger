@@ -1,0 +1,37 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.layer__anchor {
+  @include mixins.relative();
+  @include mixins.bgBtn();
+  @include mixins.textColorAlternative();
+  @include mixins.padding(2, 0);
+  @include mixins.fontAlternative();
+  @include mixins.uppercase();
+  @include mixins.bold();
+  @include mixins.transition();
+  text-align: center;
+  width: 25rem;
+  letter-spacing: 0.1rem;
+
+  &:after {
+    @include mixins.absolute();
+    @include mixins.border(0.2, solid, variables.$color-alternative);
+    @include mixins.z-index();
+    @include mixins.transition();
+    content: "";
+    left: 0.5rem;
+    top: 0.2rem;
+    width: 96%;
+    height: 87%;
+    transform: rotate(4deg);
+  }
+
+  &:hover {
+    background-color: #e6b523;
+  }
+
+  &:hover::after {
+    transform: rotate(0deg);
+  }
+}

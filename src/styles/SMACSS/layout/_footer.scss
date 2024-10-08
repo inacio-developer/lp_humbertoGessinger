@@ -1,0 +1,39 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer {
+  @include mixins.flex();
+  @include mixins.bgColorAlternative();
+  @include mixins.padding(6, 0);
+  gap: 8rem;
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__title,
+  &__link {
+    height: 4rem;
+  }
+
+  &__title {
+    @include mixins.textColorPrimary();
+    @include mixins.uppercase();
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    @include mixins.flex(row, flex-start, center);
+    @include mixins.margin(0.2, 0);
+    @include mixins.textColorPrimary();
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    @include mixins.margin(0, 0.8, 0, 0);
+  }
+}

@@ -1,0 +1,39 @@
+@use "./mixins";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include mixins.textColorAlternative();
+  @include mixins.bgColorPrimary();
+  @include mixins.font();
+  @include mixins.fontSize();
+  margin: auto;
+  width: 100%;
+  max-width: 1550px;
+  overflow-x: hidden;
+}
+
+a:visited {
+  @include mixins.none("color");
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  @include mixins.none("text-decoration");
+}
+
+button {
+  @include mixins.none("outline");
+  @include mixins.none("border");
+}
+
+ul {
+  @include mixins.none("list-style");
+}

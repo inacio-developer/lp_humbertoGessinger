@@ -1,0 +1,49 @@
+@use "../base/mixins";
+@use "../layout/section";
+
+.artist {
+  @include mixins.flex(row, flex-start, flex-end);
+  @include mixins.padding(12, 0);
+  scroll-margin-top: 5rem;
+  gap: 9rem;
+
+  &__description {
+    @include mixins.heightFull();
+    @include mixins.relative();
+
+    &__title {
+      @include mixins.margin(1, 0);
+      @include mixins.uppercase();
+      font-size: 3.2rem;
+    }
+
+    &__text:first-of-type {
+      @include mixins.margin(1, 0, 0, 0);
+    }
+
+    &__text:nth-of-type(2) {
+      @include mixins.margin(1.5, 0);
+    }
+
+    &__text:nth-of-type(3) {
+      @include mixins.margin(0, 0, 1.5, 0);
+    }
+
+    &__sign {
+      @include mixins.widthFull();
+      @include mixins.block();
+      @include mixins.absolute();
+      @include mixins.fontSign();
+      @include mixins.textColorContrast();
+      @include mixins.bold();
+      text-align: end;
+      right: 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__photo {
+    width: 50%;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}

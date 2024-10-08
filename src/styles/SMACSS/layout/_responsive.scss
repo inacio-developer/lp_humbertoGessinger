@@ -1,0 +1,105 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+@media (max-width: variables.$mobile) {
+  .menu {
+    &__logo__img {
+      width: 14rem;
+    }
+    &__mobile__icon {
+      width: 5rem;
+    }
+  }
+
+  .layer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &__anchors {
+      flex-direction: column;
+    }
+  }
+
+  .discography {
+    &__slide {
+      &__item {
+        &__bg__photo {
+          width: 23rem;
+        }
+        &__photo {
+          width: 14rem;
+        }
+      }
+
+      &__arrow__icon__img {
+        width: 6rem;
+      }
+    }
+  }
+
+  .banner {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: variables.$tablet) {
+  .menu {
+    &__mobile {
+      @include mixins.flex();
+    }
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menu__mobile__active {
+    @include mixins.flex(column, end, flex-end);
+  }
+
+  .artist {
+    @include mixins.flex(column, flex-start);
+    gap: 3rem;
+    &__description__title {
+      font-size: 3rem;
+    }
+
+    &__photo {
+      @include mixins.widthFull();
+    }
+
+    &__description {
+      &__sign {
+        @include mixins.margin(1.5, 0, 0, 0);
+      }
+
+      &__text {
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .discography {
+    @include mixins.flex(column-reverse, center, flex-start);
+    @include mixins.padding(10, 0);
+
+    &__slide {
+      width: 100%;
+    }
+
+    &__music {
+      @include mixins.widthFull();
+      margin-top: 10rem;
+    }
+
+    &__slide {
+      align-self: center;
+    }
+  }
+
+  .footer {
+    @include mixins.flex("column");
+  }
+}
